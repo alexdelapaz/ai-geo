@@ -1,0 +1,601 @@
+[?2004hroot@a40b311b5b6f:/orbnode-backend-fastapi# cuel[K[Krl orbnode.com
+[?2004l<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json" />
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+
+
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+
+
+  <script defer src="/static/js/bundle.js"></script></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+[?2004hroot@a40b311b5b6f:/orbnode-backend-fastapi# curl localhost
+[?2004lcurl: (7) Failed to connect to localhost port 80 after 0 ms: Couldn't connect to server
+[?2004hroot@a40b311b5b6f:/orbnode-backend-fastapi# curl [K[K[K[K[K[7mhostname -I[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chostname -I
+[A
+[?2004l172.17.0.4 
+[?2004hroot@a40b311b5b6f:/orbnode-backend-fastapi# curl [7m172.17.0.2[27m172.17.0.2
+[?2004lcurl: (7) Failed to connect to 172.17.0.2 port 80 after 0 ms: Couldn't connect to server
+[?2004hroot@a40b311b5b6f:/orbnode-backend-fastapi# curl 172.17.0.2:8000
+[?2004l<div style="text-align: center; font-size: 2em">        <img style="width: 4em" src='https://storage.googleapis.com/www.alexdelapaz.com/images/orbnode_logo.png'/>        <a style="display: block" href='/docs'>orbnode api</a>        <p>geospatial ai api for hyper-local information</p></div>[?2004hroot@a40b311b5b6f:/orbnode-backend-fastapi# curl 172.17.0.2:8000[K[K
+[?2004lcurl: (7) Failed to connect to 172.17.0.2 port 80 after 0 ms: Couldn't connect to server
+[?2004hroot@a40b311b5b6f:/orbnode-backend-fastapi# curl 172.17.0.2:8000[K[Kpython
+[?2004lPython 3.12.4 (main, Jul 23 2024, 07:23:10) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import requests
+>>> respone = requext[K[Ksts.(172.17.0.2:8000/datasets/places-list-da[K[Kreturn'[K')_'172.17.0.2:8000/datasets/places-list-return')_[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+  File "<stdin>", line 1
+    respone = requests.('172.17.0.2:8000/datasets/places-list-return')
+                       ^
+SyntaxError: invalid syntax
+>>> respone = requests.('172.17.0.2:8000/datasets/places-list-return')g('172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce('172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct('172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 697, in send
+    adapter = self.get_adapter(url=request.url)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+requests.exceptions.InvalidSchema: No connection adapters were found for '172.17.0.2:8000/datasets/places-list-return'
+>>> respone = requests.get('172.17.0.2:8000/datasets/places-list-return')h172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/172.17.0.2:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+>>> respone
+<Response [200]>
+>>> respone.data
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'Response' object has no attribute 'data'
+>>> respone.data[K[K[K[K.json(_)[K[K)
+  File "<stdin>", line 1
+    respone..json()
+            ^
+SyntaxError: invalid syntax
+>>> respone..json()[1Pjson()
+{'3cd02e12-aa21-403a-87dc-742a167e49ad': {'place_name': 'string', 'place_address': 'string'}, '3dbf5c92-4034-4129-aaa1-5ffb1f217aa0': {'place_name': 'string', 'place_address': 'string'}, 'e0f1f3e4-4d99-424e-94e7-ca0d6c019016': {'place_name': 'ss', 'place_address': 'ss'}, '1d99cd70-9a7f-415b-9334-52a98411901b': {'place_name': 'coffee place', 'place_address': '1357 Somewhere Dr. D.C. 20002'}, 'adb974c7-7c71-43c3-b43d-51db07225d65': {'place_name': 'coffee place', 'place_address': 'aa'}, 'cba88a86-1c83-443b-8cd8-2ef9cc0b3b7b': {'place_name': 'coffee place', 'place_address': 'aa'}, 'fcce08bd-65e3-428d-8647-da1e7706d739': {'place_name': 'coffee place', 'place_address': 'aa'}, '6c50a9f4-a91b-4459-b386-f61959656df5': {'place_name': 'coffee place', 'place_address': '4321'}, '82d92037-c6a2-4b7d-b110-8ab787a15721': {'place_name': 'coffee place', 'place_address': '4321'}, 'ee49a01c-0d16-46d2-b214-60976730ea0c': {'place_name': 'coffee place', 'place_address': '4321'}, '02c1ad6e-5c04-41ca-8d80-0a14edac3672': {'place_name': 'coffee place', 'place_address': '4321'}, '1364d75a-3842-4412-8002-dc64fedc2a2b': {'place_name': 'coffee king', 'place_address': 'sss'}, '56a3da53-6205-4d1a-9aa8-25de22327c27': {'place_name': 'coffee place', 'place_address': 'dd'}, 'f4ab03e3-0631-408f-86b0-0835a08ebed0': {'place_name': 'coffee place', 'place_address': '4321'}, 'af98bb49-7b46-4a6e-8f6c-a79766b7ff6b': {'place_name': 'tea-ny', 'place_address': '3333, 992j2n'}, 'f2063122-9d8b-4b5e-bd15-31f63bd3f4d2': {'place_name': 'coffee place', 'place_address': '423618'}, '868e875e-27d4-4a00-b504-56fb9da0af15': {'place_name': 'coffee place', 'place_address': '423618'}}
+>>> json_d[K[K[K[K[K[Kdata = repons[Ke.json()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'repone' is not defined. Did you mean: 'respone'?
+>>> data = repone.json()spone.json()
+>>> data
+{'3cd02e12-aa21-403a-87dc-742a167e49ad': {'place_name': 'string', 'place_address': 'string'}, '3dbf5c92-4034-4129-aaa1-5ffb1f217aa0': {'place_name': 'string', 'place_address': 'string'}, 'e0f1f3e4-4d99-424e-94e7-ca0d6c019016': {'place_name': 'ss', 'place_address': 'ss'}, '1d99cd70-9a7f-415b-9334-52a98411901b': {'place_name': 'coffee place', 'place_address': '1357 Somewhere Dr. D.C. 20002'}, 'adb974c7-7c71-43c3-b43d-51db07225d65': {'place_name': 'coffee place', 'place_address': 'aa'}, 'cba88a86-1c83-443b-8cd8-2ef9cc0b3b7b': {'place_name': 'coffee place', 'place_address': 'aa'}, 'fcce08bd-65e3-428d-8647-da1e7706d739': {'place_name': 'coffee place', 'place_address': 'aa'}, '6c50a9f4-a91b-4459-b386-f61959656df5': {'place_name': 'coffee place', 'place_address': '4321'}, '82d92037-c6a2-4b7d-b110-8ab787a15721': {'place_name': 'coffee place', 'place_address': '4321'}, 'ee49a01c-0d16-46d2-b214-60976730ea0c': {'place_name': 'coffee place', 'place_address': '4321'}, '02c1ad6e-5c04-41ca-8d80-0a14edac3672': {'place_name': 'coffee place', 'place_address': '4321'}, '1364d75a-3842-4412-8002-dc64fedc2a2b': {'place_name': 'coffee king', 'place_address': 'sss'}, '56a3da53-6205-4d1a-9aa8-25de22327c27': {'place_name': 'coffee place', 'place_address': 'dd'}, 'f4ab03e3-0631-408f-86b0-0835a08ebed0': {'place_name': 'coffee place', 'place_address': '4321'}, 'af98bb49-7b46-4a6e-8f6c-a79766b7ff6b': {'place_name': 'tea-ny', 'place_address': '3333, 992j2n'}, 'f2063122-9d8b-4b5e-bd15-31f63bd3f4d2': {'place_name': 'coffee place', 'place_address': '423618'}, '868e875e-27d4-4a00-b504-56fb9da0af15': {'place_name': 'coffee place', 'place_address': '423618'}}
+>>> for el in data:
+... pr[K[K    p[[Krint(el)_[K
+... 
+3cd02e12-aa21-403a-87dc-742a167e49ad
+3dbf5c92-4034-4129-aaa1-5ffb1f217aa0
+e0f1f3e4-4d99-424e-94e7-ca0d6c019016
+1d99cd70-9a7f-415b-9334-52a98411901b
+adb974c7-7c71-43c3-b43d-51db07225d65
+cba88a86-1c83-443b-8cd8-2ef9cc0b3b7b
+fcce08bd-65e3-428d-8647-da1e7706d739
+6c50a9f4-a91b-4459-b386-f61959656df5
+82d92037-c6a2-4b7d-b110-8ab787a15721
+ee49a01c-0d16-46d2-b214-60976730ea0c
+02c1ad6e-5c04-41ca-8d80-0a14edac3672
+1364d75a-3842-4412-8002-dc64fedc2a2b
+56a3da53-6205-4d1a-9aa8-25de22327c27
+f4ab03e3-0631-408f-86b0-0835a08ebed0
+af98bb49-7b46-4a6e-8f6c-a79766b7ff6b
+f2063122-9d8b-4b5e-bd15-31f63bd3f4d2
+868e875e-27d4-4a00-b504-56fb9da0af15
+>>>     print(el)[C[C[C[Cfor el in data:
+...     print(el.valuer[Ks[K)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AttributeError: 'str' object has no attribute 'value'
+>>>     print(el.value)[1P)[1P)[1P)[1P)[1P)[1P)[)])[C[1P)[1P)tel)yel)pel)[Cel)(el)[C[C[C)[C
+  File "<stdin>", line 1
+    print(type(el))
+IndentationError: unexpected indent
+>>> b[K    print(type(el))el.value)
+  File "<stdin>", line 1
+    print(el.value)
+IndentationError: unexpected indent
+>>>     print(el.value)type(el))el.value)[C[C[C[C[4Pfor el in data:
+... for el in data:[C[C[C[C    print(el.value)
+...     break
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AttributeError: 'str' object has no attribute 'value'
+>>>     breakprint(el.value)[C[C[C[C[4Pfor el in data:[C[C[C[C    print(el.value)[C[C[C[C[4Pfor el in data:[C[C[C[C    print(el.value)[C[C[C[C[4Pfor el in data:[C[C[C[C    print(el.value)[C[C[C[C[C[C[C[C[10Pbreak[C[C[C[C[Ktype(data)
+<class 'dict'>
+>>> data.keys()
+dict_keys(['3cd02e12-aa21-403a-87dc-742a167e49ad', '3dbf5c92-4034-4129-aaa1-5ffb1f217aa0', 'e0f1f3e4-4d99-424e-94e7-ca0d6c019016', '1d99cd70-9a7f-415b-9334-52a98411901b', 'adb974c7-7c71-43c3-b43d-51db07225d65', 'cba88a86-1c83-443b-8cd8-2ef9cc0b3b7b', 'fcce08bd-65e3-428d-8647-da1e7706d739', '6c50a9f4-a91b-4459-b386-f61959656df5', '82d92037-c6a2-4b7d-b110-8ab787a15721', 'ee49a01c-0d16-46d2-b214-60976730ea0c', '02c1ad6e-5c04-41ca-8d80-0a14edac3672', '1364d75a-3842-4412-8002-dc64fedc2a2b', '56a3da53-6205-4d1a-9aa8-25de22327c27', 'f4ab03e3-0631-408f-86b0-0835a08ebed0', 'af98bb49-7b46-4a6e-8f6c-a79766b7ff6b', 'f2063122-9d8b-4b5e-bd15-31f63bd3f4d2', '868e875e-27d4-4a00-b504-56fb9da0af15'])
+>>> data.keys()[1P()[1P()[1P()[1P()v()a()l()u()e()s()
+dict_values([{'place_name': 'string', 'place_address': 'string'}, {'place_name': 'string', 'place_address': 'string'}, {'place_name': 'ss', 'place_address': 'ss'}, {'place_name': 'coffee place', 'place_address': '1357 Somewhere Dr. D.C. 20002'}, {'place_name': 'coffee place', 'place_address': 'aa'}, {'place_name': 'coffee place', 'place_address': 'aa'}, {'place_name': 'coffee place', 'place_address': 'aa'}, {'place_name': 'coffee place', 'place_address': '4321'}, {'place_name': 'coffee place', 'place_address': '4321'}, {'place_name': 'coffee place', 'place_address': '4321'}, {'place_name': 'coffee place', 'place_address': '4321'}, {'place_name': 'coffee king', 'place_address': 'sss'}, {'place_name': 'coffee place', 'place_address': 'dd'}, {'place_name': 'coffee place', 'place_address': '4321'}, {'place_name': 'tea-ny', 'place_address': '3333, 992j2n'}, {'place_name': 'coffee place', 'place_address': '423618'}, {'place_name': 'coffee place', 'place_address': '423618'}])
+>>> for el in data.values():
+...     print()e)l)[)])'])'])p'])l'])a'])c'])e'])_'])n'])a'])m'])e'])
+... 
+string
+string
+ss
+coffee place
+coffee place
+coffee place
+coffee place
+coffee place
+coffee place
+coffee place
+coffee place
+coffee king
+coffee place
+coffee place
+tea-ny
+coffee place
+coffee place
+>>> import torch
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'torch'
+>>> import torch[C[C[C[C    print(el['place_name'])[C[C[C[C[15Pimport torch[C[C[C[C[K[0]*3
+[0, 0, 0]
+>>> len([])+1
+1
+>>> len([])+1*p[K[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'list'
+>>> len([])+1*[0])*[0](len([])+1)*[0][C[C[C[C[C
+[0]
+>>> (len([])+1)*[0]1])+1)*[0]
+[0, 0]
+>>> (len([1])+1)*[0],])+1)*[0]2])+1)*[0]
+[0, 0, 0]
+>>> def levenshtein_distance(s1, s2):
+...     # Create a matrix to store the distance values
+...     len_s1, len_s2 = len(s1), len(s2)
+...     dp = [[0] * (len_s2 + 1) for _ in range(len_s1 + 1)]
+...     
+...     # Initialize the matrix
+...     for i in range(len_s1 + 1):
+...         dp[i][0] = i
+...     for j in range(len_s2 + 1):
+...         dp[0][j] = j
+...     
+...     # Fill the matrix
+...     for i in range(1, len_s1 + 1):
+...         for j in range(1, len_s2 + 1):
+...             if s1[i - 1] == s2[j - 1]:
+...                 dp[i][j] = dp[i - 1][j - 1]
+...             else:
+...                 dp[i][j] = min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1]) + 1
+...     
+...     # Return the Levenshtein distance (edit distance)
+...     return dp[len_s1][len_s2]
+... 
+>>> def character_error_rate(reference, hypothesis):
+...     dist = levenshtein_distance(reference, hypothesis)
+...     cer = dist / len(reference)
+...     return cer
+... 
+>>> # Example
+>>> reference = "John Doe"
+>>> hypothesis = "Jon Doe"
+>>> 
+>>> cer = character_error_rate(reference, hypothesis)
+>>> print(f"Character Error Rate (CER): {cer:.4f}")
+Character Error Rate (CER): 0.1250
+>>> 
+>>> print(f"Character Error Rate (CER): {cer:.4f}")[C[C[C[Ccer = character_error_rate(reference, hypothesis)[C[C[C[C[27Phypothesis = "Jon Doe"[C[C[C[Ccer = character_error_rate(reference, hypothesis)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)[1P)")")[1P)[1P)[1P)[1P)[C[C[C[Cprint(f"Character Error Rate (CER): {cer:.4f}")[C[C[C[C[Kfor [K[K[K[Kfor el in respond[Ks[K[K[Kons[Ke.json():
+... 
+  File "<stdin>", line 2
+    
+    ^
+IndentationError: expected an indented block after 'for' statement on line 1
+>>> for el in respone.json():
+...     print(character_error_rate(_[K))"))s))s))")),)) ))e))l)).))[1P))[))]))']))']))p']))l']))a']))c']))E']))_']))N']))[1P']))[1P']))[1P']))e']))_']))n']))a']))m']))e']))
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: string indices must be integers, not 'str'
+>>>     print(character_error_rate("ss", el['place_name']))[C[C[C[C[30Pfor el in respone.json():[C[K[1Prespone.json()[1Prespone.json()[C[C[C[C[C[C[C[C[C[C[C[C[1Prespone.json()[C[C[C[C[C[C[C[C[C[C[C[1Prespone.json()[C[C[C[C[C[C[C[C[C[C[1Prespone.json()[C[C[C[C[C[C[C[C[C[1Prespone.json()[C[C[C[C[C[C[C[C[1Prespone.json()[C[C[C[C[C[C[C[1Pespone.json()[C[C[C[C[C[C[1Prespone.json()[C[C[C[C[C[1Prespone.json()[C[C[C[C
+{'3cd02e12-aa21-403a-87dc-742a167e49ad': {'place_name': 'string', 'place_address': 'string'}, '3dbf5c92-4034-4129-aaa1-5ffb1f217aa0': {'place_name': 'string', 'place_address': 'string'}, 'e0f1f3e4-4d99-424e-94e7-ca0d6c019016': {'place_name': 'ss', 'place_address': 'ss'}, '1d99cd70-9a7f-415b-9334-52a98411901b': {'place_name': 'coffee place', 'place_address': '1357 Somewhere Dr. D.C. 20002'}, 'adb974c7-7c71-43c3-b43d-51db07225d65': {'place_name': 'coffee place', 'place_address': 'aa'}, 'cba88a86-1c83-443b-8cd8-2ef9cc0b3b7b': {'place_name': 'coffee place', 'place_address': 'aa'}, 'fcce08bd-65e3-428d-8647-da1e7706d739': {'place_name': 'coffee place', 'place_address': 'aa'}, '6c50a9f4-a91b-4459-b386-f61959656df5': {'place_name': 'coffee place', 'place_address': '4321'}, '82d92037-c6a2-4b7d-b110-8ab787a15721': {'place_name': 'coffee place', 'place_address': '4321'}, 'ee49a01c-0d16-46d2-b214-60976730ea0c': {'place_name': 'coffee place', 'place_address': '4321'}, '02c1ad6e-5c04-41ca-8d80-0a14edac3672': {'place_name': 'coffee place', 'place_address': '4321'}, '1364d75a-3842-4412-8002-dc64fedc2a2b': {'place_name': 'coffee king', 'place_address': 'sss'}, '56a3da53-6205-4d1a-9aa8-25de22327c27': {'place_name': 'coffee place', 'place_address': 'dd'}, 'f4ab03e3-0631-408f-86b0-0835a08ebed0': {'place_name': 'coffee place', 'place_address': '4321'}, 'af98bb49-7b46-4a6e-8f6c-a79766b7ff6b': {'place_name': 'tea-ny', 'place_address': '3333, 992j2n'}, 'f2063122-9d8b-4b5e-bd15-31f63bd3f4d2': {'place_name': 'coffee place', 'place_address': '423618'}, '868e875e-27d4-4a00-b504-56fb9da0af15': {'place_name': 'coffee place', 'place_address': '423618'}}
+>>> respone.json()[C[C[C[C    print(character_error_rate("ss", el['place_name']))[C[C[C[C[30Pfor el in respone.json():.:v:a:l:u:e:s:(:):[C
+... for el in respone.json().values():[C[C[C[C[20Prespone.json()[C[C[C[C    print(character_error_rate("ss", el['place_name']))
+... 
+2.5
+2.5
+0.0
+6.0
+6.0
+6.0
+6.0
+6.0
+6.0
+6.0
+6.0
+5.5
+6.0
+6.0
+3.0
+6.0
+6.0
+>>>     print(character_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():
+... for el in respone.json().values():[C[C[C[C    print(character_error_rate("ss", el['place_name']))
+...     print()')s)s)'),) )el['place_name'])[C
+...     print()
+... 
+2.5
+ss string
+
+2.5
+ss string
+
+0.0
+ss ss
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+5.5
+ss coffee king
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+3.0
+ss tea-ny
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+>>>     print()
+  File "<stdin>", line 1
+    print()
+IndentationError: unexpected indent
+>>>     print()'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[C    print(character_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[C[20Prespone.json()[C[C[C[C    print(character_error_rate("ss", el['place_name']))[C[C[C[C[30Pfor el in respone.json():[C[C[C[Cprint(f"Character Error Rate (CER): {cer:.4f}")[C[C[C[C[10Pcer = character_error_rate(reference)[C[C[C[C[15Phypothesis = "Jon Doe"[C[C[C[Creference = "Joh[C[C[C[C[C[C[C[C[C[C[13P# Example[C[C[C[C    return cer[C[C[C[C[C[C[C[Ccer = dist / len(reference)[C[C[C[C[C[C[C[Cdist = levenshtein_distance(reference, hypothesis)[C[C[C[C[6Pdef character_error_rate(reference, hypothesis):[C[C[C[C[19P    return dp[len_s1][len_s2][C[C[C[C[C[C[C[C# Return the Levenshtein distance (edit distance)[C[C[C[C[C[C[C[C[K            dp[i][j] = min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1]) + 1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Celse:[K    dp[i][j] = dp[i - 1][j - 1][C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pif s1[i - 1] == s2[j - 1]:[C[C[C[C[C[C[C[C[C[C[C[Cfor j in range(1, len_s2 + 1):[C[C[C[C[C[C[C[C[4Pfor i in range(1, len_s1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13P# Fill the matrix[C[C[C[C[C[C[C[C[K    dp[0][j] = j[C[C[C[C[C[C[C[Cfor j in range(len_s2 + 1):[C[C[C[C[C[C[C[C[11P    dp[i][0] = i[C[C[C[C[C[C[C[Cfor i in range(len_s1 + 1):[C[C[C[C[C[C[C[C[4P# Initialize the matrix[C[C[C[C[C[C[C[C[Kdp = [[0] * (len_s2 + 1) for _ in range(len_s1 + 1)][C[C[C[C[C[C[C[C[19Plen_s1, len_s2 = len(s1), len(s2)[C[C[C[C[C[C[C[C# Create a matrix to store the distance values[C[C[C[C[17Pdef levenshtein_distance(s1, s2):[C[C[C[C[15P(len([1,2])+1)*[0][2P])+1)*[0][1P])+1)*[0][C[C[C[C[2Plen([])+1*[0][K[C[C[C[C[4P[0]*3import torch[C[C[C[C    print(el['place_name'])[C[C[C[C[3Pfor el in data.values():[C[C[C[C[11Pdata.values()[2Pkeys()[C[C[C[C[1Ptype(data)[C[C[C[C[1P    breakprint(el.value)[C[C[C[C[4Pfor el in data:[C[C[C[C    print(el.value)type(el))el.value)[C[C[C[C[4Pfor el in data:[C[C[C[C[2P    print(el)[C[C[C[Cfor el in data:[C[C[C[Cdata[K = respone.json()[1Ppone.json()[C[C[C[C[6Prespone.json().json()[3Pdata[K = requests.get('http://172.17.0.2:8000/datasets/places-list-return')
+>>> respone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():
+... for el in respone.json().values():[C[C[C[Crespone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))
+...     print(character_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22P'ss', el['place_name'])
+...     print('ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[C[C[C[C    print()[K
+... 
+2.5
+ss string
+
+2.5
+ss string
+
+0.0
+ss ss
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+5.5
+ss coffee king
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+3.0
+ss tea-ny
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+>>>     print()'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')
+>>> respone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():
+... for el in respone.json().values():[C[C[C[Crespone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))
+...     print(character_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])
+...     print('ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[C[C[C[C    print()[K
+... 
+2.5
+ss string
+
+2.5
+ss string
+
+0.0
+ss ss
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+5.5
+ss coffee king
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+3.0
+ss tea-ny
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+>>>     print()'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://172.17.0.2:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')[1P:8000/datasets/places-list-return')o:8000/datasets/places-list-return')r:8000/datasets/places-list-return')b:8000/datasets/places-list-return')n:8000/datasets/places-list-return')o:8000/datasets/places-list-return')d:8000/datasets/places-list-return')e:8000/datasets/places-list-return').:8000/datasets/places-list-return')c:8000/datasets/places-list-return')o:8000/datasets/places-list-return')m:8000/datasets/places-list-return')
+>>> respone = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():
+... for el in respone.json().values():[C[C[C[Crespone = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))
+...     print(character_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C    print()[K'ss', el['place_name'])
+...     print('ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C    print()[K
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: string indices must be integers, not 'str'
+>>> respone
+<Response [404]>
+>>> respone.jsonm[K(_[K)
+{'detail': 'Not Found'}
+>>> respone.json()[K[C[C[C[C    print()'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://orbnode.com:8000/datasets/places-list-return')[1@s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+>>> response
+<Response [404]>
+>>> response.json()(
+... response.json()([K
+... 
+... 
+KeyboardInterrupt
+>>> response.json()[K
+... 
+KeyboardInterrupt
+>>> response.json()
+{'detail': 'Not Found'}
+>>> curl http://orbnode.com:8000/datasets/places-list-return
+  File "<stdin>", line 1
+    curl http://orbnode.com:8000/datasets/places-list-return
+         ^^^^
+SyntaxError: invalid syntax
+>>> curl http://orbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[Cworbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cworbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cworbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.orbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+  File "<stdin>", line 1
+    curl http://www.orbnode.com:8000/datasets/places-list-return
+         ^^^^
+SyntaxError: invalid syntax
+>>> c[K
+KeyboardInterrupt
+>>> curl http://www.orbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Porbnode.com:8000/datasets/places-list-return[C[C[C[Cresponse.json()[K[K)([K = requests.get('http://orbnode.com:8000/datasets/places-list-return')[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[1Prequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[1Pequests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cworbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cworbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cworbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+<Response [404]>
+>>> requests.get('http://www.orbnode.com:8000/datasets/places-list-return')[C[C[C[1Pwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpwww.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+<Response [404]>
+>>> requests.get('http://www.orbnode.com:8000/datasets/places-list-return')
+<Response [200]>
+>>> requests.get('http://www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[11Pcurl http://www.orbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Porbnode.com:8000/datasets/places-list-return[C[C[C[Cresponse.json()[K[K)([K = requests.get('http://orbnode.com:8000/datasets/places-list-return')
+>>> response = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[7Pquests.get('http://www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[11Pcurl http://www.orbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Porbnode.com:8000/datasets/places-list-return[C[C[C[Cresponse.json()[K[K)([K = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[Ce.json()[K[K[C[C[C[C    print()'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[21Pfor el in respone.json().values():[C[C[C[Crespone = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[43Pfor el in respone.json().values():se.json().values():
+... for el in response.json().values():[C[C[C[Cresponse = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[7Pquests.get('http://www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[11Pcurl http://www.orbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Porbnode.com:8000/datasets/places-list-return[C[C[C[Cresponse.json()[K[K)([K = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[Ce.json()[K[K[C[C[C[C    print()'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))
+...     print(character_error_rate("ss", el['place_name']))[C[C[C[C[20Pfor el in response.json().values():[C[C[C[Cresponse = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[7Pquests.get('http://www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[11Pcurl http://www.orbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Porbnode.com:8000/datasets/places-list-return[C[C[C[Cresponse.json()[K[K)([K = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[C[C[C[Ce.json()[K[K[C[C[C[C    print()'ss', el['place_name'])
+...     print()
+... 
+4.0
+ss ssstabucks
+
+0.5
+ss sss
+
+1.0
+ss a
+
+0.5
+ss s
+
+1.0
+ss gg
+
+1.0
+ss 
+
+1.0
+ss 
+
+1.0
+ss 
+
+1.0
+ss 
+
+1.0
+ss 
+
+2.0
+ss TEST
+
+4.5
+ss undefined
+
+4.5
+ss undefined
+
+4.5
+ss undefined
+
+4.5
+ss undefined
+
+4.5
+ss undefined
+
+4.5
+ss undefined
+
+4.5
+ss undefined
+
+1.0
+ss dsss
+
+1.0
+ss d
+
+4.5
+ss undefined
+
+1.0
+ss ssss
+
+4.5
+ss undefined
+
+1.5
+ss ddd
+
+4.5
+ss undefined
+
+5.0
+ss cup of yum
+
+5.5
+ss coffee house
+
+5.5
+ss coffee house
+
+6.0
+ss coffee place
+
+6.0
+ss coffee place
+
+3.0
+ss tea-ny
+
+3.0
+ss tea-ny
+
+>>> [K>>> [K>>> [K>>> [K>>> [K>>> [K>>> [K>>> character_error_rate("yellow","yellow coffee")
+1.1666666666666667
+>>> character_error_rate("yellow","yellow coffee")[1P")[1P")[1P")[1P")[1P")[1P")[1P")
+0.0
+>>> character_error_rate("yellow","yellow")[1P")[1P")[1P")[1P")[1P")[1P")l")a") ")c")o")s")e")c")h")a")[1P[1P[1P[1P[1P[1P[1@a[1@l[1@a[1@ [1@c[1@o[1@s[1@e[1@k[1@a
+0.3
+>>> character_error_rate("ala coseka","la cosecha")[1P")[1P")[1P")[1P")[1P")[1P")[1P")[1P")[1P")[1P")y")e")l")l")o")w")
+0.9
+>>> [K>>> [K>>> character_error_rate("ala coseka","yellow")la cosecha")[8Pyellow","yellow") coffee")[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[20Pfor el in response.json().values():[C[C[C[Cresponse = requests.get('http://orbnode.com:8000/datasets/places-list-return')
+>>> response = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[35Pcharacter_error_rate("ala coseka","yellow")la cosecha")[8Pyellow","yellow") coffee")[C[C[C[C    print()[K'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccharacter_error_rate("ss", el['place_name']))[C[C[C[C[20Pfor el in response.json().values():[C[C[C[Cresponse = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[C[7Pquests.get('http://www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[11Pcurl http://www.orbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Porbnode.com:8000/datasets/places-list-return[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwww.orbnode.com:8000/datasets/places-list-return[C[C[C[Crequests.get('http://www.orbnode.com:8000/datasets/places-list-return')[C[C[C[C[C[Csponse = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[43Pfor el in response.json().values():[C[C[C[Cresponse = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[43Pfor el in response.json().values():[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[C[C[C[Cresponse = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[Cfor el in [K[C[C[C[C    print(character_error_rate("ss", el['place_name']))[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22P'ss', el['place_name'])[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[K[C[C[C[Ccharacter_error_rate("yellow","yellow coffee")")[Kala coseka","la cosecha")[4Pyellow")[C[C[C[Cresponse = requests.get('http://orbnode.com:8000/datasets/places-list-return')[C[C[C[C[Kr[Kprint(response)
+<Response [200]>
+>>> print(response).)j)s)o)n)()[C)
+{'c792c10e-a7b0-4361-8e38-a21ae15440fd': {'place_name': 'ssstabucks', 'place_address': 's'}, '70dabf4e-02a8-4995-9a19-aad47157930b': {'place_name': 'sss', 'place_address': 'ss'}, 'f3311b03-1707-4c33-82ee-75e49f6a7755': {'place_name': 'a', 'place_address': 'a'}, '4a3d6a19-1ddf-4c7d-b84c-150aad3db9f2': {'place_name': 's', 'place_address': 'ss'}, '1e50851f-d401-419a-a2d5-0159ddace4d9': {'place_name': 'gg', 'place_address': 'g'}, 'a783348f-7478-480e-9be9-6f7983c65d84': {'place_name': '', 'place_address': ''}, '8f594b19-2b8c-41ef-8324-94589c4bdf30': {'place_name': '', 'place_address': ''}, 'e3a3a5d6-ab32-42a3-b36f-8173dfef1208': {'place_name': '', 'place_address': ''}, 'e215b83d-04c6-4dbb-b1ed-e5a2adceb215': {'place_name': '', 'place_address': 'null'}, 'e3cac1be-45b4-4ab7-903b-7dbce6e8a700': {'place_name': '', 'place_address': 'undefined'}, '5f486889-ba33-4d93-8c30-1dc7495210f7': {'place_name': 'TEST', 'place_address': 'undefined'}, 'aa90b213-fe54-4a2d-8e47-cc895598bd3a': {'place_name': 'undefined', 'place_address': 'undefined'}, '23ce0a40-45f8-4a3b-9c0b-dcbbc947b37e': {'place_name': 'undefined', 'place_address': 'undefined'}, '32e259f7-a916-40a1-af98-59051967b91b': {'place_name': 'undefined', 'place_address': 'undefined'}, 'a552a2d4-289d-4c08-a34a-5a0d17a83315': {'place_name': 'undefined', 'place_address': 'undefined'}, '23ace4c0-b192-4445-9872-be73adb88afa': {'place_name': 'undefined', 'place_address': 'undefined'}, 'eb6c00c3-9d64-4c57-9f7b-12eeb99d4816': {'place_name': 'undefined', 'place_address': 'undefined'}, '7c5eeb5b-40af-458b-bdaf-4b6f2d413d94': {'place_name': 'undefined', 'place_address': 'undefined'}, 'b8a2be57-2ec2-4cd9-8f2b-64eb1ed99ad2': {'place_name': 'dsss', 'place_address': 'dss'}, '2c4627f5-0326-48d3-967b-68e3e4f882a0': {'place_name': 'd', 'place_address': 'd'}, 'f85ee89d-3094-4678-8ce6-dbc563fa417a': {'place_name': 'undefined', 'place_address': 'undefined'}, '31705261-cb19-4394-9dc9-cbcc95c46eff': {'place_name': 'ssss', 'place_address': 'sss'}, '764a7348-b5d4-4f2b-8b72-a207c41981d2': {'place_name': 'undefined', 'place_address': 'undefined'}, '7fdfa0da-3a06-4922-9810-db34bf7df202': {'place_name': 'ddd', 'place_address': 'dd'}, 'b1a26057-4b0e-4af5-828a-064a386efe8d': {'place_name': 'undefined', 'place_address': 'undefined'}, '0fded702-2b05-4a2f-a3ff-dcd67af58de5': {'place_name': 'cup of yum', 'place_address': 's'}, 'cdb610f6-2039-4880-ace8-4aa860ab3f29': {'place_name': 'coffee house', 'place_address': '1234'}, '961e7d92-279c-4c7d-9282-6775c497d2bb': {'place_name': 'coffee house', 'place_address': '1234'}, 'bdfd47e6-30ca-4b92-983d-df3c6be7108c': {'place_name': 'coffee place', 'place_address': '1357 Somewhere Dr. D.C. 20002'}, '5bd8ebe2-007c-4445-9538-4220b945df31': {'place_name': 'coffee place', 'place_address': '1357 Somewhere Dr. D.C. 20002'}, '63b5b2cf-a09e-4ab8-9199-76d13804e5e3': {'place_name': 'tea-ny', 'place_address': '1357'}, 'b356c1b0-b44a-47e6-93cb-3eeb145aeee1': {'place_name': 'tea-ny', 'place_address': '1357'}}
+>>> [?2004hroot@a40b311b5b6f:/orbnode-backend-fastapi# 
